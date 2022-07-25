@@ -1,2 +1,2 @@
-# bmi-calc
-Calculate BMI and Health Risks
+# BMI Calculator
+Calculate BMI and Health Risks.
