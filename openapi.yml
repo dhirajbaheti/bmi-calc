@@ -69,6 +69,21 @@ components:
         candidate:
           type: string
           example: Matt Ca
+    PersonDetails:
+      type: object
+      required:
+        - weight
+        - height
+      properties:
+        weight:
+          type: integer
+          example: 75
+        height:
+          type: integer
+          example: 175
+        gender:
+          type: string
+          example: Male
   securitySchemes:
     bearerAuth:
       type: http
