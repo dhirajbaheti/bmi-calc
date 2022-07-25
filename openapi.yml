@@ -68,7 +68,7 @@ components:
           example: Matteo
         candidate:
           type: string
-          example: Matt Cao
+          example: Matt Ca
   securitySchemes:
     bearerAuth:
       type: http
