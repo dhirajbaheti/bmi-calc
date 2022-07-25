@@ -1,0 +1,76 @@
+openapi: 3.0.1
+info:
+  title: bmi calc
+  version: '1.0'
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+paths:
+  /api/vote:
+    post:
+      tags:
+        - vote-api
+      requestBody:
+        description: vote to add to the Urn
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VoteType"
+      operationId: codeapp.application.add_vote
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                type: string
+  /api/results/{useless}:
+    get:
+      tags:
+        - results-api
+      summary: Get the voting results
+      operationId: codeapp.application.get_urn
+      parameters:
+        - name: useless
+          in: path
+          required: true
+          schema:
+            type: string
+            example: 'useless'
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                type: string
+components:
+  schemas:
+    VoteType:
+      type: object
+      required:
+        - candidate
+      properties:
+        voter:
+          type: string
+          example: Matteo
+        candidate:
+          type: string
+          example: Matt Cao
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
