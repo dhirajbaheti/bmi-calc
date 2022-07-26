@@ -40,7 +40,7 @@ conda deactivate
 Run the project in dev environment -
 ```
 conda activate bmi-venv
-uvicorn main:app --port 8020
+uvicorn main:app --reload --port 8020
 Access the Endpoints at http://127.0.0.1:8020/docs
 conda deactivate
 ```
