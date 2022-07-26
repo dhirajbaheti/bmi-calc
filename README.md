@@ -19,7 +19,7 @@ docker run -p 8000:8000 bmi-calc:latest
 
 ### Check the endpoints and test them
 
-After you have built and run your docker, go to http://127.0.0.1:8000/docs to check the swagger interface and test the endpoints. For example, you can first run the `POST` endpoint to calculate the bmi, and then one can analyse the statistics of the calculated bmis using `GET` endpoint.
+After you have built and run your docker, go to http://127.0.0.1:8000/docs to check the swagger interface and test the endpoints. For example, you can first run the `POST` endpoint to calculate the bmi, and then analyse the statistics of the calculated bmis using `GET` endpoint.
 
 
 ## How to build and run this repo in dev environment using uvicorn:
