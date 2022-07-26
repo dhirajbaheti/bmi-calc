@@ -34,11 +34,13 @@ conda install -c conda-forge uvicorn
 conda install pip
 pip install pytest
 pip install -r requirements.txt
+export PYTHONPATH=/root/../../bmi-calc <- Path to the project directory
 conda deactivate
 ```
 
 Run the project in dev environment -
 ```
+cd project_dir/app
 conda activate bmi-venv
 uvicorn main:app --reload --port 8020
 Access the Endpoints at http://127.0.0.1:8020/docs
