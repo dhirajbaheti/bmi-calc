@@ -32,7 +32,7 @@ conda create -n bmi-venv
 conda activate bmi-venv
 conda install -c conda-forge uvicorn
 conda install pip
-conda install pytest
+pip install pytest
 pip install -r requirements.txt
 conda deactivate
 ```
